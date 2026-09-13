@@ -1,14 +1,11 @@
 ---
 number:
-title:
 difficulty:
 topic:
 pattern:
 solved_alone: false
 redo_date:
 ---
-
-# {{title}}
 
 ## Problem
 <!-- link only, do not copy the statement -->

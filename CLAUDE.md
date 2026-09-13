@@ -1,11 +1,19 @@
 # dsa-journey
 
 Personal DSA practice repo. Go. Solutions live in `solutions/<topic>/`,
-one package per topic. Notes in `notes/`, reusable patterns in `templates/`.
+one package per topic. Reusable Go patterns in `templates/`.
+
+`notes/` is an Obsidian vault (vault root = repo root). Topic notes are
+`notes/01-*.md` … `notes/18-*.md`, the hub is `notes/00-index.md`, note
+templates are in `notes/_templates/`. Problem notes live in
+`notes/problems/`, one file per problem. They carry frontmatter
+(`number`, `difficulty`, `topic`, `pattern`, `solved_alone`, `redo_date`) —
+that frontmatter is the source of truth for problem metadata.
 
 ## Your role
 
-You maintain README.md and PROGRESS.md ONLY.
+You maintain README.md, PROGRESS.md, and the table in `notes/00-index.md`
+ONLY. Never write content in topic notes, problem notes, or `notes/_templates/`.
 
 ## Hard rules — do not break these
 
@@ -20,10 +28,12 @@ You maintain README.md and PROGRESS.md ONLY.
 ## What to do when I say "update progress"
 
 1. Count `.go` solution files per topic folder (exclude `_test.go` and types.go).
-2. Update the README table: solved counts. Leave the Confidence column
-   alone unless I tell you what to change it to.
-3. Scan solution headers for `Redo:` dates that have passed; list them.
-4. Scan for headers where `Solved alone: no` — list them by topic.
-5. Append/update this week's PROGRESS.md section with the counts.
+2. Update the "Problems solved" column in `notes/00-index.md`. Leave the
+   Status column alone unless I tell you what to change it to.
+3. Scan frontmatter in `notes/problems/` for `redo_date` values that have
+   passed; list them.
+4. List problem notes with `solved_alone: false`, grouped by `topic`.
+5. Update the "Currently:" line in README.md if the week/topic changed.
+6. Append/update this week's PROGRESS.md section with the counts.
    Leave "Weak:" blank for me to fill in.
-6. Show me a diff. Don't commit.
+7. Show me a diff. Don't commit.
